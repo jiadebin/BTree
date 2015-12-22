@@ -1,0 +1,19 @@
+# Outline
+
+Buzun Chen and Yexin Wu
+
+## Tests in main.cpp
+
+We added the following line in `intTest()`:
+
+		checkPassFail(intScan(&index,-1000,GT,6000,LT), 5000);
+
+We also modified `main.cpp` to accept a new argument 6, which creates three new index files without deleting them. So later we can test the "reopen an index on an existing one" scenario by invoking test1, test2, and test3.
+
+## Tests
+
+We created a code snippet `custom_tests.cpp` which contains functions to test the "Sparse relations with size of 3000, instead of relations with consecutive numbers" cases.
+
+## Design report
+
+We included `report.pdf` as our design report.
