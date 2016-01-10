@@ -1,7 +1,7 @@
 I found a bug in this project, when I use condition such as 5<=key<10, the count of result always less than real. 
 Then I read your code, I found there is an error in file btree.cpp - findPos function,line 474, 
-you shouldn't use "if(lowOp == GT && compare<T>(itr, lowVal) > 0 )", 
-it should be "
+you shouldn't use "if(lowOp == GT && compare<T>(itr, lowVal) > 0 )", this can lead to missing some result equal to lowVal.
+I think it should be "
         if(lowOp == GT && compare<T>(itr, lowVal) > 0 )  {
 					this->bufMgr->unPinPage(this->file,tmpPageNo,false);
 					return pos;
